@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="display">
+                <input id="screen" type="text" placeholder="0" />
+            </div>
+            <div class="buttons">
+                <!-- row1 -->
+                <button onclick="AC()" style = "background-color:orange;">AC</button>
+                <button onclick="fact()">!</button>
+                <button class="btn">(</button>
+                <button class="btn">)</button>
+                <button class="btn">%</button>
+                <button onclick="back()" style = "background-color: red;">DEL</button>
+                <!-- row2 -->
+                <button id="sin" onclick="sin()">sin</button>
+                <button onclick="pi()">pi</button>
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">/</button>
+                <!-- row3 -->
+                <button id="cos" onclick="cos()">cos</button>
+                <button onclick="pow()">^</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">*</button>
+                <!-- row4 -->
+                <button id="tan" onclick="tan()">tan</button>
+                <button onclick="sqrt()">sqrt</button>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">-</button>
+                <!-- row5 -->
+                <button onclick="log()">log</button>
+                <button onclick="e()">e</button>
+                <button class="btn">0</button>
+                <button class="btn">.</button>
+                <button onclick="screen.value = eval(screen.value)" style = "background-color: green;">=</button>
+                <button class="btn plus">+</button>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
