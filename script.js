@@ -1,12 +1,21 @@
 var screen = document.querySelector("#screen");
 
-var button = document.querySelectorAll(".btn");
+var buttons = document.querySelectorAll(".btn");
 
-for(item of button){
-    item.addEventListener("click", e=>{
-        buttonText = e.target.innerText;
+buttons.forEach(item => {
+    item.addEventListener("click", e => {
+        let buttonText = e.target.innerText;
         screen.value += buttonText;
     });
+});
+
+function calculate() {
+    try {
+        screen.value = eval(screen.value);
+    } catch (e) {
+        alert("Invalid operation");
+        screen.value = "";
+    }
 }
 
 function sin() {
@@ -44,14 +53,14 @@ function e() {
 function fact() {
     var f = 1;
     var n = screen.value;
-    for(var i = 1; i<=n; i++){
-        f = f*i;
+    for (var i = 1; i <= n; i++) {
+        f = f * i;
     }
     screen.value = f;
 }
 
 function back() {
-    screen.value = screen.value.substr(0, screen.value.length-1);
+    screen.value = screen.value.substr(0, screen.value.length - 1);
 }
 
 function AC() {

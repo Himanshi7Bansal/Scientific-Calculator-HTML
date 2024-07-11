@@ -9,47 +9,46 @@
     <body>
         <div class="container">
             <div class="display">
-                <input id="screen" type="text" placeholder="0" />
+                <input id="screen" type="text" placeholder="0" aria-label="Calculator display" />
             </div>
             <div class="buttons">
                 <!-- row1 -->
-                <button onclick="AC()" style = "background-color:orange;">AC</button>
-                <button onclick="fact()">!</button>
-                <button class="btn">(</button>
-                <button class="btn">)</button>
-                <button class="btn">%</button>
-                <button onclick="back()" style = "background-color: red;">DEL</button>
+                <button onclick="AC()" style="background-color:orange;" aria-label="Clear">AC</button>
+                <button onclick="fact()" aria-label="Factorial">!</button>
+                <button class="btn" aria-label="Open parenthesis">(</button>
+                <button class="btn" aria-label="Close parenthesis">)</button>
+                <button class="btn" aria-label="Percentage">%</button>
+                <button onclick="back()" style="background-color:red;" aria-label="Delete">DEL</button>
                 <!-- row2 -->
-                <button id="sin" onclick="sin()">sin</button>
-                <button onclick="pi()">pi</button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">/</button>
+                <button id="sin" onclick="sin()" aria-label="Sine">sin</button>
+                <button onclick="pi()" aria-label="Pi">pi</button>
+                <button class="btn" aria-label="7">7</button>
+                <button class="btn" aria-label="8">8</button>
+                <button class="btn" aria-label="9">9</button>
+                <button class="btn" aria-label="Division">/</button>
                 <!-- row3 -->
-                <button id="cos" onclick="cos()">cos</button>
-                <button onclick="pow()">^</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">*</button>
+                <button id="cos" onclick="cos()" aria-label="Cosine">cos</button>
+                <button onclick="pow()" aria-label="Power">^</button>
+                <button class="btn" aria-label="4">4</button>
+                <button class="btn" aria-label="5">5</button>
+                <button class="btn" aria-label="6">6</button>
+                <button class="btn" aria-label="Multiplication">*</button>
                 <!-- row4 -->
-                <button id="tan" onclick="tan()">tan</button>
-                <button onclick="sqrt()">sqrt</button>
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">-</button>
+                <button id="tan" onclick="tan()" aria-label="Tangent">tan</button>
+                <button onclick="sqrt()" aria-label="Square root">sqrt</button>
+                <button class="btn" aria-label="1">1</button>
+                <button class="btn" aria-label="2">2</button>
+                <button class="btn" aria-label="3">3</button>
+                <button class="btn" aria-label="Subtraction">-</button>
                 <!-- row5 -->
-                <button onclick="log()">log</button>
-                <button onclick="e()">e</button>
-                <button class="btn">0</button>
-                <button class="btn">.</button>
-                <button onclick="screen.value = eval(screen.value)" style = "background-color: green;">=</button>
-                <button class="btn plus">+</button>
+                <button onclick="log()" aria-label="Logarithm">log</button>
+                <button onclick="e()" aria-label="Euler's number">e</button>
+                <button class="btn" aria-label="0">0</button>
+                <button class="btn" aria-label="Decimal">.</button>
+                <button onclick="calculate()" style="background-color:green;" aria-label="Equal">=</button>
+                <button class="btn plus" aria-label="Addition">+</button>
             </div>
         </div>
-
         <script src="./script.js"></script>
     </body>
 </html>

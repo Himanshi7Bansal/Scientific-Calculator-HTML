@@ -11,14 +11,12 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    font-size: 1rem;
 }
 
 .container {
     padding: 20px;
     border-radius: 16px;
-    /* background: rgba(206, 76, 97, 0.45); */
-    /* box-shadow: 8px 8px 12px rgb(224, 93, 115), */
-    /* -8px -8px 12px rgb(224, 93, 115); */
     background: rgba(193, 155, 129, 0.9);
     box-shadow: 8px 8px 12px rgb(186, 158, 158),
     -8px -8px 12px rgb(182, 147, 147);
@@ -29,20 +27,19 @@ body {
     height: 40px;
     margin: 8px;
     padding: 20px;
-    font-size: 35px;
+    font-size: 2rem;
+    font-weight: bold;
     outline: none;
     border: none;
     text-align: right;
     padding-right: 0.5em;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 6px;
-    /* box-shadow: inset 8px 8px 8px rgb(231, 117, 136),
-    inset -8px -8px 8px rgb(231, 117, 136); */
     box-shadow: inset 8px 8px 8px rgba(109, 87, 87, 0.5),
     inset -8px -8px 8px rgba(128, 106, 106, 0.5);
 }
 
-#screen::placeholder{
+#screen::placeholder {
     color: black;
 }
 
@@ -57,7 +54,8 @@ body {
 .buttons button {
     width: 50px;
     height: 30px;
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
     border: none;
     outline: none;
     padding: 8%;
@@ -66,14 +64,12 @@ body {
     color: black;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.3);
-    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    /* box-shadow: 5px 8px 8px rgb(218, 101, 121),
-    -5px -5px 8px rgb(209, 98, 116); */
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
     box-shadow: 5px 8px 8px rgb(190, 157, 157),
     -5px -5px 8px rgb(187, 183, 161);
 }
 
-.buttons button:hover{
+.buttons button:hover {
     transform: scale(1.1);
     background-color: rgba(218, 197, 197, 0.468);
 }
@@ -81,4 +77,39 @@ body {
 .equal {
     grid-column: span 2;
     text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .buttons button {
+        width: 100%;
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .display #screen {
+        font-size: 2rem;
+        /* padding: 15px; */
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .buttons button {
+        width: 100%;
+        padding: 5px;
+        font-size: .7rem;
+    }
+
+    .display #screen {
+        font-size: 1.5rem;
+        /* padding: 12px; */
+    }
 }
